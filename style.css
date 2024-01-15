@@ -1,0 +1,209 @@
+/* Reset de estilos */
+body,
+header,
+nav,
+main,
+section,
+footer,
+h1,
+h2,
+p,
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* Substitua pelo caminho da sua imagem */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 1080px;
+  /* ou outra altura desejada */
+  overflow-x: hidden;
+}
+
+header {
+  height: 80px;
+  width: 100%;
+  border: 2px solid #00BF63;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  /* Cor do texto */
+  font-size: 18px;
+  /* Tamanho do texto */
+  font-weight: 550;
+  /* Peso da fonte */
+  font-size: 30px;
+  cursor: pointer;
+  animation: gradientAnimation 4s linear infinite;
+}
+
+/*  */
+.container-main {
+  background-image: url('Imagens/background.png');
+}
+
+.container-main .divisao {
+  display: flex;
+}
+
+.container-main .divisao .lado-esquerdo {
+  width: 50%;
+  padding: 20px;
+  margin-left: 40px;
+  margin-top: 80px;
+  box-sizing: border-box;
+  Color: #FFFFFF;
+  /* Cor de fundo do lado esquerdo */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container-main .divisao .lado-esquerdo h2 {
+  color: #00BF63;
+  margin-bottom: 20px;
+}
+
+.container-main .divisao .lado-esquerdo h1 {
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 40px;
+}
+
+.container-main .divisao .lado-esquerdo p {
+  width: 90%;
+  font-size: 20px;
+}
+
+.container-main .divisao .lado-esquerdo button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 40%;
+  font-weight: bold;
+  border: 2px solid #00BF63;
+  transition: background-color 0.3s ease;
+}
+
+.container-main .divisao .lado-esquerdo button:hover {
+  background-color: #00BF63;
+  /* Nova cor de fundo ao passar o mouse */
+  color: #000000;
+  /* Nova cor do texto ao passar o mouse */
+}
+
+.container-main .divisao .lado-direito {
+  width: 50%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container-main .divisao .lado-direito img {
+  height: 100%;
+}
+
+.container-main .header-fundo {
+  display: flex;
+  height: 80px;
+  background-color: #000000;
+  color: #FFFFFF;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0;
+  border: 2px solid #00BF63;
+  margin-top: 0;
+}
+
+.container-main .header-fundo p {
+  font-weight: 550;
+  display: flex;
+  align-items: center;
+}
+
+.container-main .header-fundo p img {
+  height: 30px;
+  margin-right: 20px;
+}
+
+.container-main .divisao .lado-esquerdo button {
+  padding: 10px;
+  background-color: #000000;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  border: 2px solid #00BF63;
+}
+
+/*  */
+.container-noticia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Adicione esta linha para centralizar verticalmente */
+  text-align: center;
+  /* Adicione esta linha para centralizar o texto */
+  background-image: url('Imagens/background.png');
+  height: 100vh;
+  /* Adicione esta linha para ocupar toda a altura da viewport */
+}
+
+.container-noticia h2 {
+  color: white;
+  margin-bottom: 10px;
+  width: 100%;
+  font-size: 30px;
+  width: 60%;
+}
+
+.container-noticia h3 {
+  color: #00BF63;
+  margin-bottom: 20px;
+  width: 60%;
+}
+
+.container-noticia img {
+  width: 60%;
+}
+
+.container-noticia p {
+  margin-top: 15px;
+  color: white;
+  width: 60%;
+  font-weight: 550;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+.container-noticia .container-fonte {
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Adicione esta linha para centralizar horizontalmente */
+  margin-top: 10px;
+  /* Ajuste o espaçamento conforme necessário */
+}
