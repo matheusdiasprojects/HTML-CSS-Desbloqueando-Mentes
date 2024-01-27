@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
+
 /* Reset de estilos */
 body,
 header,
@@ -13,7 +15,7 @@ li,
 a {
   margin: 0;
   padding: 0;
-  font-family: 'poppins', sans-serif;
+  font-family: 'Roboto Mono', monospace;
 }
 
 html,
@@ -37,7 +39,6 @@ body {
   height: 80px;
   width: 100%;
   border-bottom: 1px solid #00BF63;
-  /* border-top: 1px solid #00BF63; */
   background-color: #000000;
   display: flex;
   align-items: center;
@@ -75,31 +76,18 @@ body {
 .container-main .divisao .lado-esquerdo h2 {
   color: #00BF63;
   margin-bottom: 20px;
+  font-size: 30px;
 }
 
 .container-main .divisao .lado-esquerdo h1 {
   width: 100%;
-  font-size: 40px;
+  font-size: 30px;
   margin-bottom: 20px;
 }
 
 .container-main .divisao .lado-esquerdo p {
   width: 90%;
-  font-size: 20px;
-}
-
-.container-main .divisao .lado-esquerdo button {
-  width: 40%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-weight: bold;
-  border: 2px solid #00BF63;
-  transition: background-color 0.3s ease;
-}
-
-.container-main .divisao .lado-esquerdo button:hover {
-  background-color: #00BF63;
-  color: #000000;
+  font-size: 15px;
 }
 
 .container-main .divisao .lado-direito {
@@ -114,7 +102,34 @@ body {
 }
 
 .container-main .divisao .lado-direito img {
-  height: 100%;
+  --border-angle-1: 0deg;
+  --border-angle-2: 90deg;
+  --border-angle-3: 180deg;
+  transition: background-color 0.3s ease;
+  color: inherit;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 70%;
+  height: 80%;
+  font-weight: 1000;
+  font-size: 20px;
+  font-family: inherit;
+  border: 0;
+  padding: var(--border-size);
+  display: flex;
+  width: max-content;
+  border-radius: 10px;
+  background-color: transparent;
+  background-image:
+    conic-gradient(from var(--border-angle-3) at 50% 20%,
+      transparent,
+      var(--bright-green) 10%,
+      transparent 50%,
+      transparent);
+  animation:
+    rotateBackground 3s linear infinite,
+    rotateBackground2 8s linear infinite,
+    rotateBackground3 13s linear infinite;
 }
 
 .container-main .header-fundo {
@@ -125,7 +140,7 @@ body {
   align-items: center;
   justify-content: space-around;
   margin: 0;
-  /*   border: 2px solid #00BF63; */
+  border-bottom: 1px solid #00BF63;
   margin-top: 0;
 }
 
@@ -140,19 +155,6 @@ body {
   margin-right: 20px;
 }
 
-.container-main .divisao .lado-esquerdo button {
-  padding: 10px;
-  background-color: #000000;
-  color: #FFFFFF;
-  border: none;
-  cursor: pointer;
-  border: 2px solid #00BF63;
-  width: 70%;
-  font-weight: 1000;
-  font-size: 20px;
-  letter-spacing: 2px;
-  border-radius: 10px;
-}
 
 /* noticia */
 .container-noticia {
@@ -168,7 +170,6 @@ body {
 .container-noticia h2 {
   width: 60%;
   font-size: 30px;
-  margin-bottom: 10px;
   color: white;
 }
 
@@ -176,17 +177,46 @@ body {
   width: 60%;
   font-size: 20px;
   color: #00BF63;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
+}
+
+.container-noticia .noticia-trick {
+  text-align: center;
+  transition: color 0.5s ease-in-out;
 }
 
 .container-noticia img {
+  --border-angle-1: 0deg;
+  --border-angle-2: 90deg;
+  --border-angle-3: 180deg;
+  transition: background-color 0.3s ease;
+  color: inherit;
   width: 60%;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: 1000;
+  font-size: 20px;
+  font-family: inherit;
+  border: 0;
+  padding: var(--border-size);
+  display: flex;
   border-radius: 10px;
+  background-color: transparent;
+  background-image:
+    conic-gradient(from var(--border-angle-3) at 90% 20%,
+      transparent,
+      var(--bright-green) 10%,
+      transparent 50%,
+      transparent);
+  animation:
+    rotateBackground 3s linear infinite,
+    rotateBackground2 8s linear infinite,
+    rotateBackground3 13s linear infinite;
 }
 
 .container-noticia p {
   width: 60%;
-  font-size: 20px;
+  font-size: 15px;
   margin-top: 15px;
   color: white;
   display: flex;
@@ -245,7 +275,18 @@ body {
   justify-content: space-around;
 }
 
-.container-metodo .metodos .metodo1,
+.container-metodo .metodos .metodo1 {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 180px;
+  border: 1px solid #fe3258;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #23232380;
+}
+
+/* .container-metodo .metodos .metodo1, */
 .container-metodo .metodos .metodo2 {
   display: flex;
   flex-direction: column;
@@ -508,32 +549,6 @@ body {
   text-decoration: none;
 }
 
-/*  */
-/* 
-.container-guia ul {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  justify-content: start;
-  align-items: start;
-  border: 1px solid white;
-  width: 60%;
-  margin-bottom: 40px;
-}
-
-.container-guia ul li {
-  color: white;
-  padding: 20px;
-  border-bottom: 1px solid white;
-  width: 95.5%;
-}
-
-.container-guia .guia-titulo {
-  font-size: 25px;
-  font-weight: 600;
-  background-color: #00BF63;
-} */
-
 /* valores */
 .container-valores {
   display: grid;
@@ -785,212 +800,179 @@ body {
 /* autor */
 .container-autor {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  align-items: flex-start; /* Alterado para alinhar os itens ao topo */
   justify-content: center;
   text-align: center;
   background-image: url('Imagens/background.png');
   width: 100%;
+  height: 780px;
 }
 
-.container-autor .autor-divisao {
+.container-autor .autor-esquerdo {
   display: flex;
-  flex-direction: row;
-}
-
-.container-autor .autor-divisao .lado-esquerdo {
-  align-items: flex-start;
-  justify-content: center;
-  width: 50%;
-  padding: 20px;
-  margin-left: 40px;
-  margin-top: 80px;
-  box-sizing: border-box;
-}
-
-.container-autor .autor-divisao .lado-esquerdo h3 {
-  margin-top: 60px;
-  width: 100%;
-  font-size: 30px;
-  margin-bottom: 10px;
-  color: white;
-}
-
-.container-autor .autor-divisao .lado-esquerdo h4 {
-  margin-top: 20px;
-  width: 100%;
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: white;
-}
-
-.container-autor .autor-divisao .lado-esquerdo p {
-  margin-top: 20px;
-  width: 100%;
-  margin-bottom: 10px;
-  color: white;
-}
-
-.container-autor .autor-divisao .lado-direito {
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.container-autor .autor-divisao .lado-direito img {
-  height: 100%;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 20px;
-  margin-left: 40px;
-  margin-top: 100px;
-}
-
-.container-autor .autor-divisao .lado-esquerdo h4 {
-  color: #00BF63;
-}
-
-/* slider */
-.slider-content {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  max-width: 100%;
-  min-width: 480px;
-  background: #fff;
-  margin: 0 auto;
-  overflow: hidden;
-  box-shadow: 0 0 35px 20px rgba(79, 69, 66, 0.2);
-}
-
-.slider-content .slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.slider-content .slide:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.slider-content .slide:first-child .txt-wrapper span.copy {
-  opacity: 1;
-}
-
-.slider-content .slide:nth-child(odd) .img {
-  margin-left: 50%;
-  transform: translateY(-100%);
-}
-
-.slider-content .slide:nth-child(odd) .txt {
-  transform: translateY(100%);
-}
-
-.slider-content .slide:nth-child(even) .img {
-  transform: translateY(100%);
-}
-
-.slider-content .slide:nth-child(even) .txt {
-  margin-left: 50%;
-  transform: translateY(-100%);
-}
-
-.slider-content .slide.active .img, .slider-content .slide.active .txt {
-  transform: translateY(0);
-}
-
-.slider-container {
-  position: relative;
-  height: 55rem;
-  overflow: hidden;
-}
-
-.slider-container:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.slider-container .slide-content {
-  position: absolute;
-  display: block;
-  width: 50%;
-  height: 100%;
-  transition: transform 0.3s ease;
-  transition-delay: 0.15s;
-}
-
-.slider-container .slide-content.txt {
-  display: table;
-  padding: 1rem 7rem;
-  background-image: url('Imagens/background.png');
-  color: white;
-}
-
-.slider-container .slide-content .txt-wrapper {
-  padding-top: 3rem;
-  position: relative;
-  display: flex;
-  vertical-align: middle;
   flex-direction: column;
+  text-align: start;
+  width: 50%;
+  padding-left: 80px; /* Alterado para 20px conforme solicitado */
+  padding-right: 80px;
+  padding-top: 80px;
 }
 
-.slider-container .slide-content .txt-wrapper span.copy {
-  position: relative;
-  text-transform: uppercase;
-  width: 2rem;
-  display: block;
-  font-size: 1rem;
-  line-height: 1;
-  margin-bottom: 1rem;
-  font-weight: 500;
-  opacity: 0;
+.container-autor .autor-esquerdo .autor-titulo {
   color: white;
+  font-size: 15px;
 }
 
-.slider-container .slide-content .txt-wrapper h2 {
-  margin: 0;
-  font-size: 3.3rem;
-  margin-bottom: 3rem;
-  line-height: 1;
-  font-weight: 600;
+.container-autor .autor-esquerdo .autor-nome {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 30px;
 }
 
-.slider-container .slide-content .txt-wrapper h2 span {
-  display: block;
-}
-
-
-.slider-container .slide-content .txt-wrapper .subtitle {
-  display: block;
-  text-transform: uppercase;
+.container-autor .autor-esquerdo .autor-subtitulo {
   color: #00BF63;
-  font-weight: bold;
-  letter-spacing: 0.3rem;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 20px;
+  font-size: 20px;
 }
 
-.slider-container .slide-content .txt-wrapper p.excerpt {
-  margin: 0;
-  color: #AEACAB;
-  font-size: 1.1rem;
-  line-height: 1.5;
-  margin-bottom: 15px;
-  padding-right: 13rem;
+.container-autor .autor-esquerdo p {
+  color: white;
+  margin-bottom: 20px;
 }
 
-.slider-container .slide-content img {
+.container-autor .autor-direito {
+  display: flex;
+  width: 50%;
+}
+
+.container-autor .autor-direito img {
+  height: 780px;
   width: 100%;
-  height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
+  object-position: top;
+}
+
+
+/* button */
+@property --border-angle-1 {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg;
+}
+
+@property --border-angle-2 {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 90deg;
+}
+
+@property --border-angle-3 {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 180deg;
+}
+
+
+/* sRGB color. */
+:root {
+  --bright-blue: rgb(0, 100, 255);
+  --bright-green: rgb(0, 255, 0);
+  --bright-red: rgb(255, 0, 0);
+  --background: black;
+  --foreground: white;
+  --border-size: 2px;
+  --border-radius: 0.75em;
+}
+
+/* Display-P3 color, when supported. */
+@supports (color: color(display-p3 1 1 1)) {
+  :root {
+    --bright-blue: color(display-p3 0 0.2 1);
+    --bright-green: color(display-p3 0.4 1 0);
+    --bright-red: color(display-p3 1 0 0);
+  }
+}
+
+@keyframes rotateBackground {
+  to {
+    --border-angle-1: 360deg;
+  }
+}
+
+@keyframes rotateBackground2 {
+  to {
+    --border-angle-2: -270deg;
+  }
+}
+
+@keyframes rotateBackground3 {
+  to {
+    --border-angle-3: 540deg;
+  }
+}
+
+.container-main .lado-esquerdo .button-trick {
+  --border-angle-1: 0deg;
+  --border-angle-2: 90deg;
+  --border-angle-3: 180deg;
+  transition: background-color 0.3s ease;
+  color: inherit;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 70%;
+  font-weight: 1000;
+  font-size: 20px;
+  font-family: inherit;
+  border: 0;
+  padding: var(--border-size);
+  display: flex;
+  width: max-content;
+  border-radius: 10px;
+  background-color: transparent;
+  background-image:
+    conic-gradient(from var(--border-angle-3) at 50% 20%,
+      transparent,
+      var(--bright-green) 10%,
+      transparent 50%,
+      transparent);
+  animation:
+    rotateBackground 3s linear infinite,
+    rotateBackground2 8s linear infinite,
+    rotateBackground3 13s linear infinite;
+}
+
+.container-main .divisao .lado-esquerdo .button-trick:hover {
+  transition: background-color 0.3s ease;
+  background-color: #00BF63;
+  background-image:
+    conic-gradient(from var(--border-angle-2) at 70% 60%,
+      transparent,
+      var(--bright-green) 10%,
+      transparent 60%,
+      transparent)
+}
+
+.container-main .lado-esquerdo .button-trick div {
+  background: var(--background);
+  padding: 1em 1.5em;
+  border-radius: calc(var(--border-radius) - var(--border-size));
+  color: var(--foreground);
+}
+
+/* scrollbar */
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #00BF63;
+  border-radius: 6px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #222;
 }
 
 /* responsividade */
