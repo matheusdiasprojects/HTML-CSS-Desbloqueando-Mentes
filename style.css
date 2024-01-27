@@ -847,11 +847,36 @@ body {
 }
 
 .container-autor .autor-direito img {
-  height: 780px;
+  height: 776px;
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
   object-position: top;
+  /*  */
+  --border-angle-1: 0deg;
+  --border-angle-2: 90deg;
+  --border-angle-3: 180deg;
+  transition: background-color 0.3s ease;
+  color: inherit;
+  cursor: pointer;
+  font-weight: 1000;
+  font-size: 20px;
+  font-family: inherit;
+  border: 0;
+  padding: var(--border-size);
+  display: flex;
+  border-radius: 10px;
+  background-color: transparent;
+  background-image:
+    conic-gradient(from var(--border-angle-3) at 50% 20%,
+      transparent,
+      var(--bright-green) 10%,
+      transparent 50%,
+      transparent);
+  animation:
+    rotateBackground 3s linear infinite,
+    rotateBackground2 8s linear infinite,
+    rotateBackground3 13s linear infinite;
 }
 
 
